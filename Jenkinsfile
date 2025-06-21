@@ -1,5 +1,11 @@
 pipeline {
     agent { label 'java17'}
+    options {
+        timeout(time: 1, unit: 'HOURS')
+    }
+    triggers {
+        pollSCM('*/5 * * * *')
+    }
     tools {
         maven ('Maven-3.9.10')
     }
