@@ -23,7 +23,7 @@ pipeline {
         }
     }
     post {
-        always {
+        success {
             // Publish JUnit test results from XML files (Ant glob pattern)
             junit '**/target/surefire-reports/*.xml'
             // Archive test reports or other artifacts
