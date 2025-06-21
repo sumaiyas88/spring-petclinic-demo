@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+    agent { label 'java17'}
     tools {
-        maven ('Maven 3.9.10')
+        maven ('Maven-3.9.10')
     }
     stages {
         stage ('SCM') {
